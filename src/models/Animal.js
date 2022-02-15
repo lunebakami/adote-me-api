@@ -1,4 +1,5 @@
-import Sequelize, { Model } from 'sequelize';
+const Sequelize = require('sequelize');
+const { Model } = Sequelize;
 
 class Animal extends Model {
   static init(sequelize) {
