@@ -7,16 +7,7 @@ class Database {
   }
 
   init() {
-    this.connection = new Sequelize(
-      databaseConfig.database,
-      databaseConfig.username,
-      databaseConfig.password,
-      {
-        host: databaseConfig.host,
-        port: databaseConfig.port,
-        dialect: databaseConfig.dialect,
-      }
-    );
+    this.connection = new Sequelize(databaseConfig);
   }
 
   async test() {
