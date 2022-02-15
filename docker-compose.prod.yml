@@ -13,3 +13,18 @@ services:
       context: ./nginx
     ports:
       - '80:80'
+  postgres:
+    container_name: adotedb
+    image: postgres:13-alpine3.14
+    restart: always
+    environment:
+      POSTGRES_USERNAME: 'postgres'
+      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_DB: 'adotedb'
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'adotedb:/var/lib/postgresql/data'
+
+volumes:
+  adotedb:
