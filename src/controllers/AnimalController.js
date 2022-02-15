@@ -13,7 +13,7 @@ class AnimalController {
     } catch (error) {
       return res.status(400).json({
         error: true,
-        message: 'Erro ao criar usuário!',
+        message: 'Erro ao criar animal!',
         data: error,
       });
     }
@@ -24,7 +24,7 @@ class AnimalController {
 
     return res.json({
       error: false,
-      message: 'Animals retornados com sucesso!',
+      message: 'Animais retornados com sucesso!',
       data: animals,
     });
   }
@@ -47,7 +47,7 @@ class AnimalController {
     } catch (error) {
       return res.status(400).json({
         error: true,
-        message: 'Erro ao editar usuário!',
+        message: 'Erro ao editar animal!',
         data: error,
       });
     }
@@ -69,7 +69,7 @@ class AnimalController {
     } catch (error) {
       return res.status(400).json({
         error: true,
-        message: 'Erro ao deletar usuário!',
+        message: 'Erro ao deletar animal!',
         data: error,
       });
     }
