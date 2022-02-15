@@ -1,4 +1,9 @@
+require('dotenv/config');
 const express = require('express');
+
+const db = require('./database');
+console.log('Testando o banco...');
+db.test();
 
 const app = express();
 
