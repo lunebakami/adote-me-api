@@ -1,6 +1,7 @@
 require('dotenv/config');
 const express = require('express');
 const db = require('./database');
+const cors = require('cors');
 
 const UserController = require('./controllers/UserController');
 const AnimalController = require('./controllers/AnimalController');
@@ -16,6 +17,7 @@ db.test();
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 const port = process.env.PORT || 8080;
